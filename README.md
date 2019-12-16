@@ -1,7 +1,5 @@
 ## 今日头条
-今日头条热点新闻爬取，as、cp、_signature参数分析。
-
-【转行三重奏】-爬虫Js逆向复习-openlaw Cookie参数解析】
+【转行三重奏】-爬虫Js逆向复习-今日头条as、cp、_signature参数分析。
 
 ## [回到总目录](https://github.com/LeoLin9527/ZSpider)
 ## 逆向简述
