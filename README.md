@@ -1,6 +1,9 @@
 ## 今日头条
-头条热点新闻爬取，as、cp、_signature参数分析。
+今日头条热点新闻爬取，as、cp、_signature参数分析。
 
+【转行三重奏】-爬虫Js逆向复习-openlaw Cookie参数解析】
+
+## [回到总目录](https://github.com/LeoLin9527/ZSpider)
 ## 逆向简述
 1、feed关键字XHR断点,Call Stack找到如下位置的代码，找到signature参数生成位置。
 2、推测this._setParams这个方法生成as,cp参数，断点调试。
@@ -75,8 +78,11 @@ node serverD.js
 Python run_spider.py
 ```
 ## 补充
+
 1、什么是控制流平坦?
+
 把代码逻辑变成统一的入口管理，而该前驱块进行基本块的分发，分发用switch语句，依赖于switch变量进行分发。
+
 2、需要先访问页面获取Cookie，否则拿不到数据。
 ## 欢迎关注(非技术)
 ![](/Pic/wechat.png)
