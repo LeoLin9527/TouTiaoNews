@@ -4,7 +4,9 @@
 ## [回到总目录](https://github.com/LeoLin9527/ZSpider)
 ## 逆向简述
 1、feed关键字XHR断点,Call Stack找到如下位置的代码，找到signature参数生成位置。
+
 2、推测this._setParams这个方法生成as,cp参数，断点调试。
+
 ![]()
 ```javascript
 function a() {
@@ -31,10 +33,15 @@ var s = i(128)
 t.exports = a
 }
 ```
+
 3、max_behot_time时间戳,初始为0,后续请求前一请求的返回值。
+
 4、_signature 跟UA指纹有关,页面加载完毕全局搜索或从步骤一XHR追踪位置，发现由g.sign生成。
+
 5、解决方案一、使用selenium执行JS代码 return window.TAC.sign(max_behot_time_tmp)。
+
 6、调试g.sign，js的anonymous算法应用了控制流平坦方式，无法从g.sign得出结果，往上查找g对象寻找思路。
+
 7、o对象涵盖一些已经生成好函数，那么下列代码个人理解为若该函数已经生成则直接调用，不存在则进行生成。
 ```javascript
 function t(a) {
@@ -50,7 +57,9 @@ function t(a) {
     r.exports
 }
 ```
+
 8、那么a=87时候，e[a]表示的函数为下列
+
 ```
 function(e, t) {
     Function(function(e) {
@@ -63,15 +72,16 @@ function(e, t) {
 }
 ```
 9、扣取JS运行时id并无实际用途，可省去。
+
 ![XHR追踪](/Pic/Call_Stack.png)
 ![g对象](/Pic/g_object.png)
 ![运行结果](/Pic/toutiaoResult.png)
 ## 使用说明
-1、先开启node服务
+1、启动接口服务
 ```
 node serverD.js
 ```
-2、执行示例
+2、启动爬虫
 ```
 Python run_spider.py
 ```
@@ -79,9 +89,9 @@ Python run_spider.py
 
 1、什么是控制流平坦?
 
-把代码逻辑变成统一的入口管理，而该前驱块进行基本块的分发，分发用switch语句，依赖于switch变量进行分发。
+把代码逻辑变成统一的入口管理，而该前驱块依赖于switch变量进行基本块的分发。
 
 2、需要先访问页面获取Cookie，否则拿不到数据。
-## 欢迎关注(非技术)
-![](/Pic/wechat.png)
+## 欢迎关注
+![非技术,非营销](/Pic/wechat.png)
 
