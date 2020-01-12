@@ -197,3 +197,10 @@ module.exports = {
     getHoney
 };
 
+console.log(getHoney());
+
+// A1A59E71F8D2C4D
+// 5E1832CCE4BD0E1
+
+// A1059E31E8A2C81
+// 5E18E21C9891EE1

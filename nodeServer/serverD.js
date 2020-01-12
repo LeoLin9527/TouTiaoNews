@@ -8,17 +8,15 @@ app.use(bodyParser());
 app.listen(8000, () => console.log('service start...'));
 
 app.get('/', (req, res) => {
-    // var params = req.params;
-    // pwd = params.pwd;
     result = func.getHoney();
-    // console.info(pwd)
     res.send(result)
 });
 
 app.post('/sign', (req, res) => {
     var data = req.body;
     var ua = data.ua;
-    var btime = data.btime;
-    var result = gsign.get_signature(btime,ua);
+    var durl = data.durl;
+    var a = {url: durl};
+    var result = gsign.get_signature(ua,a);
     res.send(result)
 });
