@@ -2,7 +2,8 @@
 【转行三重奏】-爬虫Js逆向复习-今日头条as、cp、_signature参数分析。
 
 ## 变更记录
-2020/1/10 调整_signature Function部分代码(截至日前有效)
+2020/1/10：调整_signature Function部分代码(截至日前有效)
+2020/2/27：issue上朋友反映signature失效（因个人转行关系不再维护此项目已无实际用途，仅作为个人学习记录）。
 
 ## [回到总目录](https://github.com/LeoLin9527/ZSpider)
 
