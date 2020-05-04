@@ -87,7 +87,3 @@ Python run_the_spider.py
 1、什么是控制流平坦?
 
 把代码逻辑变成统一的入口管理，而该前驱块依赖于switch变量进行基本块的分发。
-
-## 欢迎关注
-![非技术,非营销](/Pic/wechat.png)
-
